@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:led="http://schemas.android.com/apk/res/com.difeng.mines"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context="com.difeng.mines.MainActivity" >
+       
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="fill_horizontal">
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dip"
+            android:collapseColumns="3"
+            android:stretchColumns="*" >
+
+            <TableRow>
+
+                <com.difeng.mines.LEDTextView
+                    android:id="@+id/ledleft"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dip"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    led:digitlen="4" />
+
+                <ImageView
+                    android:id="@+id/startbtn"
+                    android:layout_width="100dip"
+                    android:layout_height="70dip"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:src="@drawable/smile" />
+
+                <com.difeng.mines.LEDTextView
+                    android:id="@+id/ledright"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    led:digitlen="4" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+       
+        <com.difeng.mines.GameView
+            android:id="@+id/gameview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="bottom" />
+    </LinearLayout>
+
+</LinearLayout>
